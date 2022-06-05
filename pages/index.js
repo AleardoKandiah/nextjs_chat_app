@@ -9,6 +9,8 @@ export const ContextProvider = () => {
   const [username, setUsername] = useState('');
   const [secret, setSecret] = useState('');
 
+  // Shared const are username and secret to recognise user presence
+  // This will be used to understand which page to render
   const value = {
   username,
   setUsername,
@@ -16,6 +18,7 @@ export const ContextProvider = () => {
   setSecret,
   };
 
+  // These must be passed into a value prop in the provider
   return <Context.Provider value={value}>{props.children}</Context.Provider>;
 }
 export default function Auth() {
