@@ -9,6 +9,16 @@ import {useRouter} from 'next/router';
 import axios from 'axios';
 
 export default function Auth() {
-  return <div className='background'>auth</div>;
+  // Build JSX
+  return (
+  <div className='background'>
+    <div className='auth-container'>
+      {/* create a form with function */}
+      <form className='auth-form' onSubmit={e => e.preventDefault}>
+
+      </form>
+    </div>
+  </div>
+  )
 }
 
