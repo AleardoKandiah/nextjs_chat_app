@@ -14,7 +14,7 @@ export default function Auth() {
   <div className='background'>
     <div className='auth-container'>
       {/* create a form with function */}
-      <form className='auth-form' onSubmit={e => e.preventDefault}>
+      <form className='auth-form' onSubmit={e => e.preventDefault()}>
 
       </form>
     </div>
