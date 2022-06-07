@@ -28,9 +28,7 @@ export default function Auth() {
             className='text-input'  
             onChange={ e => setUsername(e.target.value)}
             // Onchange will be where the context API will be used by triggering the e event       
-          />
-
-        </div>
+          />        </div>
       </form>
     </div>
   </div>
