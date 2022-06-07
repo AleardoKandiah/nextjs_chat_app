@@ -45,5 +45,5 @@
 }
 
 .text-input::placeholder {
-
+    color: hsla( 0, 0%, 100%, 0.568);
 }
