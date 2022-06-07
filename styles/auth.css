@@ -47,3 +47,7 @@
 .text-input::placeholder {
     color: hsla( 0, 0%, 100%, 0.568);
 }
+
+.submit-button:hover {
+    background-color: #938ffe;
+}
