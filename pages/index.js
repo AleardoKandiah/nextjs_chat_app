@@ -10,7 +10,7 @@ import axios from 'axios';
 
 export default function Auth() {
   // Import Context
-  const { username, setUsername, secret, setSecret } = useContext(Context) 
+  const { setUsername, setSecret } = useContext(Context) 
 
   // Build JSX
   return (
@@ -20,15 +20,36 @@ export default function Auth() {
       <form className='auth-form' onSubmit={e => e.preventDefault()}>
         <div className='auth-title'>Sky Chat</div>
 
-        {/* ADD INPUTS */}
+        {/* ADD INPUTS: Email */}
         <div className='input-container'> 
           {/* Add props in the input */}
           <input
-            placeholder='email' 
+            placeholder='Email' 
             className='text-input'  
             onChange={ e => setUsername(e.target.value)}
             // Onchange will be where the context API will be used by triggering the e event       
-          />        </div>
+          /> 
+        </div>
+       
+        {/* ADD INPUTS: Password */}
+        <div className='input-container'> 
+          {/* Add props in the input */}
+          <input
+            // type = password to hide input and change function called to setSecret
+            type ='password'
+            placeholder='Password' 
+            className='text-input'  
+            onChange={ e => setSecret(e.target.value)}
+            // Onchange will be where the context API will be used by triggering the e event       
+          /> 
+        </div>
+
+        {/* import login button and signup*/}
+        <button
+        type='submit'
+        className='submit-button'>
+        Login / Sign Up
+        </button>        
       </form>
     </div>
   </div>
