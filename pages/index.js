@@ -22,7 +22,7 @@ export default function Auth() {
 
         {/* ADD INPUTS: Email */}
         <div className='input-container'> 
-          {/* Add props in the input */}
+          {/* Add props in the input (username)*/}
           <input
             placeholder='Email' 
             className='text-input'  
@@ -33,7 +33,7 @@ export default function Auth() {
        
         {/* ADD INPUTS: Password */}
         <div className='input-container'> 
-          {/* Add props in the input */}
+          {/* Add props in the input (password) */}
           <input
             // type = password to hide input and change function called to setSecret
             type ='password'
