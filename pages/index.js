@@ -9,7 +9,7 @@ import {useRouter} from 'next/router';
 import axios from 'axios';
 
 export default function Auth() {
-  // Import Context
+  // Import Context so that when signing up, these values are imported to username and secret
   const { setUsername, setSecret } = useContext(Context) 
 
   // Build JSX
@@ -45,9 +45,7 @@ export default function Auth() {
         </div>
 
         {/* import login button and signup*/}
-        <button
-        type='submit'
-        className='submit-button'>
+        <button type='submit' className='submit-button'>
         Login / Sign Up
         </button>        
       </form>
