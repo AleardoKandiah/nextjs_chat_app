@@ -3,21 +3,48 @@ import React, {useContext} from 'react';
 import { Context } from '../content';
 
 // this is imported so that upon login we are redirected to chat page
-import {useRouter} from 'next/router';
+import router, {useRouter} from 'next/router';
 
-// Downloaded axios client from yarn is then imported
+// Downloaded axios HTTP client from yarn is then imported
 import axios from 'axios';
 
 export default function Auth() {
   // Import Context so that when signing up, these values are imported to username and secret
-  const { setUsername, setSecret } = useContext(Context) 
+  const { username, secret, setUsername, setSecret } = useContext(Context); 
+      
+  // define router
+    const router = useRouter();
+
+  // API and chat route
+
+      // create an onsubmit function that takes submission event 
+  function onSubmit(e) {
+    e.preventDefault();
+
+    // Validation of username and secret value
+    if (username.lenght === 0 || secret.lenght === 0) return;
+
+    // if validation success create API
+    axios.put(
+      // route
+      'https://api.chatengine.io/users/',
+      // store data and API key
+      {username, secret},
+      // set headers for authentithication
+      {headers: {'Private-key':   'e88cc4bf-56f9-4e4f-83e0-50f6f1546945'}} 
+    )
+
+    // Once API has been made and response is successful, push to chat page
+
+    .then((r) => router.push('/chats'));
+  }
 
   // Build JSX
   return (
   <div className='background'>
     <div className='auth-container'>
       {/* create a form with function */}
-      <form className='auth-form' onSubmit={e => e.preventDefault()}>
+      <form className='auth-form' onSubmit={(e) => onSubmit(e)}>
         <div className='auth-title'>Sky Chat</div>
 
         {/* ADD INPUTS: Email */}
