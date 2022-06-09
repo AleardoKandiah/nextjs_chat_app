@@ -21,7 +21,19 @@ const MessageFormSocial = dynamic(() =>
 )
 
 
+// JSX needed to make dynamic import 
+export default function Chats() {
+    // first pull username and secret from the context defined
+    const { username, secret } = useContext(Context)
+   
+    //state variable needed to determine wehter ready to enter chat page
+    const [ showChat, setShowChat ] = useState(false)
 
-export default function Chats(){
-    return <div className='background'>chats</div>
+    // then pull the router
+    const router = useRouter()
+
+
+    return (
+    <div className='background'>chats</div>
+    )
 }
