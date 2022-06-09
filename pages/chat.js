@@ -33,7 +33,28 @@ export default function Chats() {
     const router = useRouter()
 
 
+    // we also need to see if the document variable is present to enter chat page
+    // this is because NextJS runs in the same project both for client and server side
+    useEffect(() => {
+        if (typeof document !== null) {
+            setShowChat(true)
+        }
+    });
+
+    // else return empty div
+    if (showChat) return <div />;
+
+    // here render the component 
     return (
-    <div className='background'>chats</div>
+    <div className='background'>
+        <div className='shadow'>
+            <ChatEngine
+            height= 'calc(100ch- 200pc)'
+            projectID=''
+            userName = {username}
+            userSecret = {secret}
+            />
+        </div>
+    </div>
     )
 }
