@@ -60,6 +60,9 @@ export default function Chats() {
             projectID=' 76e318e2-c6e1-4d9f-ad45-0214cfa62efc'
             userName = {username}
             userSecret = {secret}
+
+            // change text form from slack through function that returns messageFormSocial component
+            renderNewMessageForm = {() => <MessageFormSocial/>}
             />
         </div>
     </div>
