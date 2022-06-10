@@ -37,9 +37,16 @@ export default function Chats() {
     // this is because NextJS runs in the same project both for client and server side
     useEffect(() => {
         if (typeof document !== null) {
-            setShowChat(true)
+            setShowChat(true);
         }
     });
+
+    // if secret or username goes blank -> return back to log page
+    // trigger when state data changes
+    useEffect(() => {
+        if (username.lenght ===0 || secret.lenght === 0) router.push('/')
+    })
+
 
     // else return empty div is showChat is false
     if (!showChat) return <div />;
