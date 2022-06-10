@@ -27,7 +27,7 @@ export default function Chats() {
     const { username, secret } = useContext(Context)
    
     //state variable needed to determine wehter ready to enter chat page
-    const [ showChat, setShowChat ] = useState(false)
+    const [ showChat, setShowChat] = useState(false)
 
     // then pull the router
     const router = useRouter()
@@ -41,8 +41,8 @@ export default function Chats() {
         }
     });
 
-    // else return empty div
-    if (showChat) return <div />;
+    // else return empty div is showChat is false
+    if (!showChat) return <div />;
 
     // here render the component 
     return (
