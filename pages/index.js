@@ -31,7 +31,7 @@ export default function Auth() {
       // store data and API key
       {username, secret},
       // set headers for authentithication
-      {headers: {'Private-key':   'e88cc4bf-56f9-4e4f-83e0-50f6f1546945'}} 
+      {headers: {'Private-key':   'c5b8d64e-887f-431d-bd78-d52832617483'}} 
     )
 
     // Once API has been made and response is successful, push to chat page
