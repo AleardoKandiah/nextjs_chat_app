@@ -15,6 +15,10 @@
     --sat: 66%;
     --lig: 75%;
     --second-hue:219;
+    
+    /* quick colors */
+    --grey: #4a5162;
+    --light-purp: #9a97fc;
 }
 
 .shadow {
@@ -30,5 +34,5 @@
 }
 
 .ce-chats-container {
-    background-color: #4a;
+    background-color: var(--grey);
 }
