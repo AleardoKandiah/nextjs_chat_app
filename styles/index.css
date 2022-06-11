@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:wgh@600;700&display=swap');
 
 *{
-    font-family: Quicksand ;
+    font-family: Quicksand !important;
 }
