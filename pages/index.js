@@ -25,7 +25,8 @@ export default function Auth() {
     if (username.lenght === 0 || secret.lenght === 0) return;
 
     // if validation success create API
-    axios.put(
+    axios
+    .put(
       // route
       'https://api.chatengine.io/users/',
       // store data and API key
@@ -35,7 +36,6 @@ export default function Auth() {
     )
 
     // Once API has been made and response is successful, push to chat page
-
     .then((r) => router.push('/chats'));
   }
 
