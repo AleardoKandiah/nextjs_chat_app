@@ -1,3 +1,24 @@
+
+
+
+
+<img width="1440" alt="nextjs-chat-tutorial" src="https://user-images.githubusercontent.com/63458393/173197662-7ab3b341-ae7f-4972-b786-2247637e3725.png">
+This project is powered by Chat Engine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
