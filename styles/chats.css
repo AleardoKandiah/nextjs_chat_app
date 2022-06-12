@@ -179,7 +179,7 @@ color: hsla(0, 0%, 100%, 0.568);
 }
 
 .ce-danger-button {
-background-color: #4a5162 !important;
+background-color: #4a5162 ;
 border: 1px solid #9a97fc !important;
 color: #9a97fc !important;
 }
