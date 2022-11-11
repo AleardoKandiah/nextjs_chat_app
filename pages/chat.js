@@ -51,7 +51,7 @@ export default function Chats() {
     // else return empty div is showChat is false
     if (!showChat) return <div />;
 
-    // here render the components
+    // here render the component
     return (
     <div className='background'>
         <div className='shadow'>
